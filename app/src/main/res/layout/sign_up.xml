@@ -44,7 +44,7 @@
             android:layout_width="264dp"
             android:layout_height="166dp"
             android:id="@+id/imageView4"
-            android:src="@drawable/캡처"
+            android:src="@drawable/handscape"
             android:layout_above="@+id/linearLayout2"
             android:layout_centerHorizontal="true" />
     </LinearLayout>
