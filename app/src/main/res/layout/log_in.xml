@@ -72,7 +72,7 @@
             android:ems="10"
             android:id="@+id/editText"
             android:layout_weight="1"
-            android:text="Enter e-mail" />
+            android:hint="E-mail" />
 
     </LinearLayout>
 
@@ -101,7 +101,7 @@
             android:layout_alignStart="@+id/email"
             android:editable="false"
             android:layout_marginLeft="0dp"
-            android:text="pass" />
+            android:hint="passward" />
     </LinearLayout>
 
     <Button
