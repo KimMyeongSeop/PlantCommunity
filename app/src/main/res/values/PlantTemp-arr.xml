@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerArray2">
+        <item>[온도 선택]</item>
+        <item>-20도 ~ -10도</item>
+        <item>-10도 ~ 0도</item>
+        <item>0도 ~ 10도</item>
+        <item>10도 ~ 20도</item>
+    </string-array>
+</resources>

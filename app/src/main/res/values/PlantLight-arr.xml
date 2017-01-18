@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerArray1">
+        <item>[햇빛량 선택]</item>
+        <item>음지식물</item>
+        <item>양지식물</item>
+        <item>음양식물</item>
+    </string-array>
+</resources>

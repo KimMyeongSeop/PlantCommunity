@@ -34,20 +34,26 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v){
                 Toast.makeText(getApplicationContext(),
                         "로그인 버튼이 눌렸어요.",
-                        Toast.LENGTH_LONG).show();
-                Intent intent = new Intent();
+                        Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(),
+                        SignupMyPlant.class);
                 intent.putExtra("email","naver");
+                startActivityForResult(intent,1003);
 
                 setResult(RESULT_OK,intent);
 
-                finish();
+                /**finish();*/
             }
 
         });
 
         back.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-
+                Toast.makeText(getApplicationContext(),
+                        "뒤로 버튼이 눌렸어요.",
+                        Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }
