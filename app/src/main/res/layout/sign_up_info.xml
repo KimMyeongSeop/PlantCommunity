@@ -31,14 +31,14 @@
         android:text="I am"
         android:id="@+id/textView8"
         android:autoText="false"
-        android:textSize="@dimen/abc_action_button_min_width_overflow_material"
-        android:textColor="@color/abc_search_url_text"
+        android:textSize="38dp"
+        android:textColor="#FF2ECB71"
         android:layout_gravity="center_horizontal"
         android:layout_below="@+id/imageButton5"
         android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/imageView6"
         android:src="@drawable/empty_user"

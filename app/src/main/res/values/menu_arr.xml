@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menuArray">
+        <item>My Plant</item>
+        <item>Diary</item>
+        <item>Ranking</item>
+        <item>Setting</item>
+    </string-array>
+</resources>

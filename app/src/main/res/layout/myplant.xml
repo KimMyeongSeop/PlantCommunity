@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="식물 관리 점수"
+        android:id="@+id/text_score"
+        android:autoText="false"
+        android:textSize="24dp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignStart="@+id/imageView10" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageView10"
+        android:src="@drawable/unnamed"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@+id/text_score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:backgroundTintMode="screen"
+        android:baselineAligned="false"
+        android:background="#3fb572"
+        android:id="@+id/relativeLayout">
+
+        <Spinner
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/menu"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/imageButton11"
+            android:src="@drawable/person"
+            android:nestedScrollingEnabled="false"
+            android:longClickable="false"
+            android:cropToPadding="false"
+            android:clickable="false"
+            android:baselineAlignBottom="false"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:backgroundTint="#45b676"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:tint="#9d9d9d"
+            android:tintMode="screen" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -31,6 +31,12 @@
             android:name="org.androidtown.myapplication.Register_pic"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog">
         </activity>
+        <activity
+            android:name="org.androidtown.myapplication.Resister_rpi">
+        </activity>
+        <activity
+            android:name="org.androidtown.myapplication.Myplant">
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>

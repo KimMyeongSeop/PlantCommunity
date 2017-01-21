@@ -1,7 +1,6 @@
 package org.androidtown.myapplication;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -32,7 +31,8 @@ public class Signupinfo extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(getApplicationContext(), Resister_rpi.class);
+                startActivity(intent);
             }
         });
 
@@ -61,7 +61,7 @@ public class Signupinfo extends AppCompatActivity {
         });
     }
 
-    @Override
+    /**@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 1005)
@@ -73,5 +73,5 @@ public class Signupinfo extends AppCompatActivity {
             }
 
         }
-    }
+    }**/
 }

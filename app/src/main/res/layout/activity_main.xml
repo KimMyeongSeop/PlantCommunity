@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout"
         android:weightSum="1"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="56dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
@@ -35,7 +35,7 @@
         android:id="@+id/textView"
         android:autoText="false"
         android:textSize="@dimen/abc_action_bar_stacked_max_height"
-        android:textColor="@color/abc_search_url_text"
+        android:textColor="#FF2ECB71"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp" />
@@ -81,7 +81,8 @@
             android:id="@+id/imageView2"
             android:src="@drawable/handscape"
             android:layout_above="@+id/linearLayout2"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
     </LinearLayout>
 
 </RelativeLayout>
