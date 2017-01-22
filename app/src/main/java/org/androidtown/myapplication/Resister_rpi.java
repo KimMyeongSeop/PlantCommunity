@@ -30,7 +30,7 @@ public class Resister_rpi extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),Myplant.class);
+                Intent intent=new Intent(Resister_rpi.this,Myplant.class);
                 startActivity(intent);
             }
         });

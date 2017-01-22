@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -31,6 +32,7 @@ public class SignupMyPlant extends AppCompatActivity {
         final Button add_date=(Button)findViewById(R.id.button9);
         final Button sub_date=(Button)findViewById(R.id.button7);
         final TextView day=(TextView)findViewById(R.id.textView7);
+        final EditText search=(EditText)findViewById(R.id.editText4);
         date = 0;
 
         String[] str=getResources().getStringArray(R.array.spinnerArray1);
@@ -70,7 +72,7 @@ public class SignupMyPlant extends AppCompatActivity {
 
         Google.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.co.kr"));
+                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.co.kr"));
                 Toast.makeText(SignupMyPlant.this,"Googling",Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }

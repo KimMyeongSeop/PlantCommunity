@@ -5,15 +5,19 @@ package org.androidtown.myapplication;
  */
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class Register_pic extends AppCompatActivity {
+
+    private Uri mImageCaptureUri;
 
     ImageButton back;
     ImageButton Photo;
@@ -49,15 +53,35 @@ public class Register_pic extends AppCompatActivity {
         Gellery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(Intent.ACTION_PICK);
+                intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
+                startActivityForResult(intent,2);
             }
         });
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            Bundle extras=data.getExtras();
-            Bitmap im=(Bitmap) extras.get("data");
-            iv.setImageBitmap(im);
+        super.onActivityResult(requestCode,resultCode,data);
+
+        if(resultCode != RESULT_OK)
+            return;
+
+        switch (requestCode) {
+            case 1 :
+            {
+                Bundle extras=data.getExtras();
+                Bitmap im=(Bitmap) extras.get("data");
+                iv.setImageBitmap(im);
+                break;
+            }
+            case 2:
+            {
+                mImageCaptureUri=data.getData();
+                Log.d("smart",mImageCaptureUri.getPath().toString());
+                iv.setImageURI(mImageCaptureUri);
+                break;
+            }
+        }
     }
 }

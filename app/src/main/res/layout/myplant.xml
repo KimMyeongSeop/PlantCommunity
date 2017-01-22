@@ -23,9 +23,8 @@
         android:id="@+id/imageView10"
         android:src="@drawable/unnamed"
         android:layout_alignWithParentIfMissing="false"
-        android:layout_below="@+id/text_score"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -63,5 +62,203 @@
             android:tintMode="screen" />
 
     </RelativeLayout>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/abc_btn_switch_to_on_mtrl_00001"
+        android:tint="#fd2b2b"
+        android:layout_above="@+id/imageView10"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView11" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/user"
+        android:src="@drawable/abc_btn_switch_to_on_mtrl_00001"
+        android:tint="#fd2b2b"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="1"
+        android:id="@+id/score"
+        android:layout_alignTop="@+id/imageView11"
+        android:layout_alignStart="@+id/imageView11"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="23dp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/user_name"
+        android:layout_marginLeft="18dp"
+        android:textColor="#ffffff"
+        android:hint="유저이름"
+        android:textSize="14dp"
+        android:layout_below="@+id/user"
+        android:layout_alignEnd="@+id/user"
+        android:layout_marginEnd="23dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView12"
+        android:src="@drawable/speech_bubble"
+        android:adjustViewBounds="true"
+        android:nestedScrollingEnabled="false"
+        android:scaleType="fitXY"
+        android:layout_marginTop="15dp"
+        android:layout_alignTop="@+id/imageView10"
+        android:layout_alignEnd="@+id/user" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView13"
+        android:layout_marginLeft="0dp"
+        android:textColor="#ffffff"
+        android:hint="말풍선"
+        android:textSize="12dp"
+        android:layout_marginTop="37dp"
+        android:layout_alignTop="@+id/imageView12"
+        android:layout_toEndOf="@+id/imageView10" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/imageView10"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_alignEnd="@+id/user_name"
+        android:layout_marginTop="50dp"
+        android:max="100"
+        android:indeterminate="false" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar2"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignEnd="@+id/progressBar"
+        android:layout_alignStart="@+id/progressBar"
+        android:max="100"
+        android:indeterminate="false" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar3"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/progressBar2"
+        android:layout_alignEnd="@+id/progressBar2"
+        android:layout_alignStart="@+id/progressBar2"
+        android:max="100"
+        android:indeterminate="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="식물의 온도"
+        android:id="@+id/textView14"
+        android:layout_above="@+id/progressBar2"
+        android:layout_alignStart="@+id/progressBar"
+        android:layout_marginBottom="14dp"
+        android:textColor="#000001" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="식물의 조도"
+        android:id="@+id/textView15"
+        android:layout_marginBottom="14dp"
+        android:textColor="#000001"
+        android:layout_alignBottom="@+id/progressBar2"
+        android:layout_alignStart="@+id/progressBar2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="식물의 수분량"
+        android:id="@+id/textView16"
+        android:layout_marginBottom="13dp"
+        android:layout_alignBottom="@+id/progressBar3"
+        android:layout_alignStart="@+id/progressBar3"
+        android:textColor="#000001" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView17"
+        android:textColor="#000001"
+        android:layout_alignBottom="@+id/textView14"
+        android:layout_toStartOf="@+id/textView20"
+        android:hint="0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView18"
+        android:textColor="#000001"
+        android:hint="0"
+        android:layout_alignBottom="@+id/textView15"
+        android:layout_toStartOf="@+id/textView21" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView19"
+        android:textColor="#000001"
+        android:hint="0"
+        android:layout_alignBottom="@+id/textView16"
+        android:layout_toStartOf="@+id/textView22" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView20"
+        android:textColor="#000001"
+        android:text="/100%"
+        android:layout_alignTop="@+id/textView17"
+        android:layout_alignEnd="@+id/progressBar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView21"
+        android:textColor="#000001"
+        android:text="/100%"
+        android:layout_alignTop="@+id/textView18"
+        android:layout_alignEnd="@+id/progressBar2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView22"
+        android:textColor="#000001"
+        android:text="/100%"
+        android:layout_alignTop="@+id/textView19"
+        android:layout_alignEnd="@+id/progressBar3" />
 
 </RelativeLayout>
