@@ -1,5 +1,6 @@
 package org.androidtown.myapplication;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 /**
  * Created by MS on 2017-01-21.
  */
+
 public class Myplant extends AppCompatActivity{
     Spinner menu_spinner;
     TextView per1;
@@ -50,15 +52,32 @@ public class Myplant extends AppCompatActivity{
         progressBar2=(ProgressBar)findViewById(R.id.progressBar2);
         progressBar3=(ProgressBar)findViewById(R.id.progressBar3);
 
-        String[] str3=getResources().getStringArray(R.array.menuArray);
+        final String[] str=getResources().getStringArray(R.array.menuArray);
         ArrayAdapter<String> adapter=new ArrayAdapter<>
-                (this, android.R.layout.simple_spinner_dropdown_item,str3);
+                (this, android.R.layout.simple_spinner_dropdown_item,str);
         menu_spinner.setAdapter(adapter);
+
+
 
         menu_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id){
+                // String po = Integer.toString(position); //자료형변환
+                switch (position){
+                    case 0:
+                        break;
+                    case 1:
+                        Intent intent=new Intent(Myplant.this,Diary.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                }
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent){

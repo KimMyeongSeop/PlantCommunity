@@ -37,6 +37,13 @@
         <activity
             android:name="org.androidtown.myapplication.Myplant">
         </activity>
+        <activity
+            android:name="org.androidtown.myapplication.Diary">
+        </activity>
+        <activity
+            android:name="org.androidtown.myapplication.Click_a_date"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog">
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>

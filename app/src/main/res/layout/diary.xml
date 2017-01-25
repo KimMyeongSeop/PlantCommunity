@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/calendarView"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="0dp"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textView23" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:backgroundTintMode="screen"
+        android:baselineAligned="false"
+        android:background="#3fb572"
+        android:id="@+id/relativeLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Spinner
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/imageButton12"
+            android:src="@drawable/person"
+            android:nestedScrollingEnabled="false"
+            android:longClickable="false"
+            android:cropToPadding="false"
+            android:clickable="false"
+            android:baselineAlignBottom="false"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:backgroundTint="#45b676"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:tint="#9d9d9d"
+            android:tintMode="screen" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView23"
+        android:layout_marginEnd="97dp"
+        android:layout_above="@+id/button8"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView24"
+        android:layout_marginLeft="102dp"
+        android:layout_alignTop="@+id/textView23"
+        android:layout_toStartOf="@+id/textView23" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="날짜 가져오기"
+        android:id="@+id/button8"
+        android:onClick="getDate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp" />
+</RelativeLayout>

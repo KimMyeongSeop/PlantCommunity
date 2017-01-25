@@ -166,7 +166,7 @@
         android:layout_alignEnd="@+id/progressBar2"
         android:layout_alignStart="@+id/progressBar2"
         android:max="100"
-        android:indeterminate="true" />
+        android:indeterminate="false" />
 
     <TextView
         android:layout_width="wrap_content"
