@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="My Plant"
+        android:id="@+id/textView28"
+        android:autoText="false"
+        android:textSize="@dimen/abc_action_button_min_width_overflow_material"
+        android:textColor="#FF2ECB71"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/imageButton15"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView30"
+        android:src="@drawable/unnamed"
+        android:layout_alignWithParentIfMissing="false"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/textView28"
+        android:layout_alignStart="@+id/textView28"
+        android:layout_marginTop="28dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_search"
+        android:hint="Google 검색"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/imageView30"
+        android:layout_alignParentStart="true"
+        android:layout_alignStart="@+id/button12"
+        android:layout_toStartOf="@+id/button12"
+        android:layout_marginLeft="50dp" />
+
+    <Button
+        android:layout_width="102dp"
+        android:layout_height="60dp"
+        android:text="Search"
+        android:id="@+id/button12"
+        android:layout_toEndOf="@+id/imageView30"
+        android:layout_alignBottom="@+id/editText_search"
+        android:layout_alignTop="@+id/editText_search"
+        android:onClick="click_bt" />
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableRow3"
+        android:layout_below="@+id/button12"
+        android:layout_alignStart="@+id/button12">
+
+        <Button
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/bt_plus"
+            android:layout_alignTop="@+id/editText4"
+            android:layout_toEndOf="@+id/imageView5"
+            android:layout_alignBottom="@+id/editText4"
+            android:onClick="click_bt" />
+
+        <Button
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/bt_min"
+            android:layout_alignTop="@+id/editText4"
+            android:layout_toEndOf="@+id/imageView5"
+            android:layout_alignBottom="@+id/editText4"
+            android:onClick="click_bt" />
+    </TableRow>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="물주는 주기 : "
+        android:id="@+id/textView36"
+        android:textSize="23dp"
+        android:layout_alignBottom="@+id/tableRow3"
+        android:layout_alignStart="@+id/editText_search"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="일수"
+        android:id="@+id/water_date"
+        android:layout_alignBottom="@+id/textView36"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="3dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton15"
+        android:src="@drawable/last_button"
+        android:backgroundTint="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner6"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/tableRow3"
+        android:layout_alignStart="@+id/textView36"
+        android:layout_toStartOf="@+id/water_date" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner7"
+        android:layout_alignBottom="@+id/spinner6"
+        android:layout_alignEnd="@+id/tableRow3"
+        android:layout_toEndOf="@+id/water_date" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="save"
+        android:id="@+id/button13"
+        android:backgroundTint="#1abb9b"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:onClick="click_bt"
+        android:layout_below="@+id/spinner6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+</RelativeLayout>

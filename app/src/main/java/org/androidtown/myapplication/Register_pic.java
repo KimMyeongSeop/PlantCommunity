@@ -3,6 +3,7 @@ package org.androidtown.myapplication;
 /**
  * Created by MS on 2017-01-18.
  */
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -73,6 +74,11 @@ public class Register_pic extends AppCompatActivity {
                 Bundle extras=data.getExtras();
                 Bitmap im=(Bitmap) extras.get("data");
                 iv.setImageBitmap(im);
+
+                Intent intent=new Intent(Register_pic.this,Signupinfo.class);
+                intent.putExtra("image",im);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 break;
             }
             case 2:
@@ -80,6 +86,7 @@ public class Register_pic extends AppCompatActivity {
                 mImageCaptureUri=data.getData();
                 Log.d("smart",mImageCaptureUri.getPath().toString());
                 iv.setImageURI(mImageCaptureUri);
+
                 break;
             }
         }

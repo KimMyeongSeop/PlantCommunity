@@ -1,7 +1,7 @@
 package org.androidtown.myapplication;
 
+import android.app.SearchManager;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by MS on 2017-01-17.
@@ -45,16 +44,28 @@ public class SignupMyPlant extends AppCompatActivity {
                 (this, android.R.layout.simple_spinner_dropdown_item,str2);
         s2.setAdapter(adapter2);
 
-
         s1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id){
-                /**tv.setText("position : " + position + parent.getItemAtPosition(position));*/
+                // String po = Integer.toString(position); //자료형변환
+                switch (position){
+                    case 0:
+                        break;
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                }
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent){
-
             }
         });
 
@@ -62,18 +73,38 @@ public class SignupMyPlant extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id){
-                /**tv.setText("position : " + position + parent.getItemAtPosition(position));*/
+                // String po = Integer.toString(position); //자료형변환
+                switch (position){
+                    case 0:
+                        break;
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                }
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent){
-
             }
         });
 
         Google.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.co.kr"));
-                Toast.makeText(SignupMyPlant.this,"Googling",Toast.LENGTH_SHORT).show();
+                //Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.co.kr"));
+                //Toast.makeText(SignupMyPlant.this,"Googling",Toast.LENGTH_SHORT).show();
+                //startActivity(intent);
+                Intent intent=new Intent();
+                intent.setAction(Intent.ACTION_WEB_SEARCH);
+                intent.putExtra(SearchManager.QUERY,search.getText().toString());
                 startActivity(intent);
             }
         });

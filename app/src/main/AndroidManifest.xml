@@ -44,6 +44,18 @@
             android:name="org.androidtown.myapplication.Click_a_date"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog">
         </activity>
+        <activity
+            android:name="org.androidtown.myapplication.Ranking">
+        </activity>
+        <activity
+            android:name="org.androidtown.myapplication.Setting">
+        </activity>
+        <activity
+            android:name="org.androidtown.myapplication.Setting_Plant">
+        </activity>
+        <activity
+            android:name="org.androidtown.myapplication.Setting_info">
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>

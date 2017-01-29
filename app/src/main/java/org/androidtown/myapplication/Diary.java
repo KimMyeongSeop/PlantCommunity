@@ -56,8 +56,14 @@ public class Diary extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 2:
+                        Intent intent2=new Intent(Diary.this,Ranking.class);
+                        intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent2);
                         break;
                     case 3:
+                        Intent intent3=new Intent(Diary.this,Setting.class);
+                        intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent3);
                         break;
                 }
 

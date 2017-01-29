@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton16"
+        android:src="@drawable/last_button"
+        android:backgroundTint="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:onClick="click_bt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="I am"
+        android:id="@+id/textView37"
+        android:autoText="false"
+        android:textSize="38dp"
+        android:textColor="#FF2ECB71"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/imageButton16"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_user"
+        android:src="@drawable/empty_user"
+        android:layout_alignWithParentIfMissing="false"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/textView37"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="102dp"
+        android:layout_height="60dp"
+        android:text="사진등록"
+        android:id="@+id/resist_pic"
+        android:backgroundTint="#2ecb71"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/imageView_user"
+        android:layout_centerHorizontal="true"
+        android:onClick="click_bt" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText7"
+        android:hint="이름을 입력해주세요"
+        android:layout_below="@+id/resist_pic"
+        android:layout_marginTop="31dp"
+        android:layout_alignEnd="@+id/resist_pic"
+        android:layout_toEndOf="@+id/imageButton16" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:id="@+id/save_name"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_gravity="right"
+        android:layout_alignBottom="@+id/editText7"
+        android:layout_toEndOf="@+id/editText7"
+        android:onClick="click_bt" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="save"
+        android:id="@+id/save"
+        android:backgroundTint="#1abb9b"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:onClick="click_bt"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

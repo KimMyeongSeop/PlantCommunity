@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:backgroundTintMode="screen"
+        android:baselineAligned="false"
+        android:background="#3fb572"
+        android:id="@+id/relativeLayout4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Spinner
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner5"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/imageButton14"
+            android:src="@drawable/person"
+            android:nestedScrollingEnabled="false"
+            android:longClickable="false"
+            android:cropToPadding="false"
+            android:clickable="false"
+            android:baselineAlignBottom="false"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:backgroundTint="#45b676"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:tint="#9d9d9d"
+            android:tintMode="screen" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView28"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/unnamed"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView29"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/empty_user"
+        android:layout_above="@+id/bt_setuser"
+        android:layout_alignStart="@+id/imageView28"
+        android:layout_marginBottom="11dp" />
+
+    <Button
+        android:layout_width="102dp"
+        android:layout_height="60dp"
+        android:text="식물설정"
+        android:id="@+id/bt_setplant"
+        android:backgroundTint="#2ecb71"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="bt_set" />
+
+    <Button
+        android:layout_width="102dp"
+        android:layout_height="60dp"
+        android:text="사용자설정"
+        android:id="@+id/bt_setuser"
+        android:backgroundTint="#2ecb71"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/bt_setplant"
+        android:layout_marginBottom="29dp"
+        android:onClick="bt_set" />
+</RelativeLayout>
