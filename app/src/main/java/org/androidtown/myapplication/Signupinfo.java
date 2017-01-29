@@ -2,6 +2,7 @@ package org.androidtown.myapplication;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -58,6 +59,9 @@ public class Signupinfo extends AppCompatActivity {
         save_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                byte[] arr=getIntent().getByteArrayExtra("image");
+                Bitmap bm= BitmapFactory.decodeByteArray(arr,0,arr.length);
+                user.setImageBitmap(bm);
 
             }
         });
@@ -69,9 +73,11 @@ public class Signupinfo extends AppCompatActivity {
         switch (requestCode)
         {
             case 0:
-                Intent intent=getIntent();
-                Bitmap im = (Bitmap)intent.getParcelableExtra("image");
-                user.setImageBitmap(im);
+                byte[] arr=getIntent().getByteArrayExtra("image");
+                Bitmap bm= BitmapFactory.decodeByteArray(arr,0,arr.length);
+                user.setImageBitmap(bm);
+
+
                 break;
         }
     }

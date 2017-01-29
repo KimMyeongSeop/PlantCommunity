@@ -10,11 +10,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import java.io.ByteArrayOutputStream;
 
 public class Register_pic extends AppCompatActivity {
 
@@ -22,8 +23,9 @@ public class Register_pic extends AppCompatActivity {
 
     ImageButton back;
     ImageButton Photo;
-    ImageButton Gellery;
+    //ImageButton Gellery;
     ImageView iv=null;
+    Bitmap bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -33,7 +35,7 @@ public class Register_pic extends AppCompatActivity {
 
         back=(ImageButton)findViewById(R.id.imageButton6);
         Photo=(ImageButton)findViewById(R.id.imageButton8);
-        Gellery=(ImageButton)findViewById(R.id.imageButton7);
+    //    Gellery=(ImageButton)findViewById(R.id.imageButton7);
         iv=(ImageView)findViewById(R.id.imageView7);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -51,18 +53,18 @@ public class Register_pic extends AppCompatActivity {
             }
         });
 
-        Gellery.setOnClickListener(new View.OnClickListener() {
+   /**     Gellery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Intent.ACTION_PICK);
                 intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
                 startActivityForResult(intent,2);
             }
-        });
+        });*/
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode,resultCode,data);
 
         if(resultCode != RESULT_OK)
@@ -72,23 +74,32 @@ public class Register_pic extends AppCompatActivity {
             case 1 :
             {
                 Bundle extras=data.getExtras();
-                Bitmap im=(Bitmap) extras.get("data");
-                iv.setImageBitmap(im);
+                bitmap=(Bitmap) extras.get("data");
+                iv.setImageBitmap(bitmap);
 
-                Intent intent=new Intent(Register_pic.this,Signupinfo.class);
-                intent.putExtra("image",im);
+                ByteArrayOutputStream stream=new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.PNG,100,stream);
+                byte[] byteArray=stream.toByteArray();
+                Intent intent=new Intent(this,Signupinfo.class);
+                intent.putExtra("image",byteArray);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+
                 break;
             }
-            case 2:
+            /**case 2:
             {
                 mImageCaptureUri=data.getData();
                 Log.d("smart",mImageCaptureUri.getPath().toString());
                 iv.setImageURI(mImageCaptureUri);
 
+                Intent intent=new Intent(this,Signupinfo.class);
+                intent.putExtra("Uri",mImageCaptureUri);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+
                 break;
-            }
+            }*/
         }
     }
 }

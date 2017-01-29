@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by MS on 2017-01-29.
@@ -130,6 +131,7 @@ public class Setting_Plant extends AppCompatActivity {
                 break;
             case R.id.button13:
 
+                Toast.makeText(getApplicationContext(),"저장되엇습니다",Toast.LENGTH_SHORT).show();
                 finish();
                 break;
         }
