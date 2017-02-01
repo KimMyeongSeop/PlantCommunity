@@ -9,17 +9,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CalendarView;
 import android.widget.Spinner;
-import android.widget.TextView;
-
-import java.util.Calendar;
-import java.util.Date;
 
 /**
  * Created by MS on 2017-01-24.
  */
 public class Diary extends AppCompatActivity {
     CalendarView cal;
-    TextView text1,text2;
     Spinner menu_spinner;
 
     @Override
@@ -28,8 +23,6 @@ public class Diary extends AppCompatActivity {
         setContentView(R.layout.diary);
 
         cal = (CalendarView)findViewById(R.id.calendarView);
-        text1=(TextView)findViewById(R.id.textView23);
-        text2=(TextView)findViewById(R.id.textView24);
         menu_spinner=(Spinner)findViewById(R.id.spinner3);
 
         CalendarViewListener listener=new CalendarViewListener();
@@ -39,8 +32,6 @@ public class Diary extends AppCompatActivity {
         ArrayAdapter<String> adapter=new ArrayAdapter<>
                 (this, android.R.layout.simple_spinner_dropdown_item,str);
         menu_spinner.setAdapter(adapter);
-
-
 
         menu_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
@@ -75,26 +66,11 @@ public class Diary extends AppCompatActivity {
         });
     }
 
-    public void getDate(View view){
-        long time = cal.getDate();
-        Date d1 = new Date(time);
-        Calendar c = Calendar.getInstance();
-        c.setTime(d1);
-
-        int year = c.get(Calendar.YEAR);
-        int month = c.get(Calendar.MONTH) + 1;
-        int day=c.get(Calendar.DAY_OF_MONTH);
-
-        text2.setText(year + "년 "+month+"월 "+day+"일");
-
-    }
-
     class CalendarViewListener implements CalendarView.OnDateChangeListener{
 
         @Override
         public void onSelectedDayChange(CalendarView arg0, int arg1, int arg2, int arg3){
             // TODO Auto-generated method stub
-            text1.setText(arg1 + "년 " + (arg2+1) + "월 " + arg3 + "일");
 
             //String date = String.valueOf(arg1)+"년 "+String.valueOf(arg2+1)+" 월"+String.valueOf(arg3)+"일";
 

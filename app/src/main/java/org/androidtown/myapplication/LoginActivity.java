@@ -37,13 +37,8 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(),
-                        SignupMyPlant.class);
-                intent.putExtra("email","naver");
-                startActivityForResult(intent,1003);
-
-                setResult(RESULT_OK,intent);
-
-                /**finish();*/
+                        Resister_rpi.class);
+                startActivity(intent);
             }
 
         });

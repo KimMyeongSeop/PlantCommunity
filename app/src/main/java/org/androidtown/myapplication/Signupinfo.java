@@ -36,7 +36,7 @@ public class Signupinfo extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(), Resister_rpi.class);
+                Intent intent=new Intent(getApplicationContext(), SignupMyPlant.class);
                 startActivity(intent);
             }
         });
@@ -70,15 +70,16 @@ public class Signupinfo extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode)
-        {
-            case 0:
-                byte[] arr=getIntent().getByteArrayExtra("image");
-                Bitmap bm= BitmapFactory.decodeByteArray(arr,0,arr.length);
-                user.setImageBitmap(bm);
+        if(data!=null)
+            switch (requestCode)
+            {
+                case 0:
+                    byte[] arr=getIntent().getByteArrayExtra("image");
+                    Bitmap bm= BitmapFactory.decodeByteArray(arr,0,arr.length);
+                    user.setImageBitmap(bm);
 
 
-                break;
-        }
+                    break;
+            }
     }
 }

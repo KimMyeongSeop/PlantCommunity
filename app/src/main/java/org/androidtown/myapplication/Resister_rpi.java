@@ -23,24 +23,15 @@ public class Resister_rpi extends AppCompatActivity {
         setContentView(R.layout.register_rpi);
 
         next=(ImageButton)findViewById(R.id.imageButton10);
-        back=(ImageButton)findViewById(R.id.imageButton9);
         enter_model=(EditText)findViewById(R.id.modelnum);
         resist=(Button)findViewById(R.id.btn_resist);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Resister_rpi.this,Myplant.class);
+                Intent intent=new Intent(Resister_rpi.this,Signupinfo.class);
                 startActivity(intent);
             }
         });
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
-
     }
 }

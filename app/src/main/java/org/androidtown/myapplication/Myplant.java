@@ -32,7 +32,14 @@ public class Myplant extends AppCompatActivity{
     ProgressBar progressBar1;
     ProgressBar progressBar2;
     ProgressBar progressBar3;
-    int num=0;
+
+    int temp=0;
+    int light=0;
+    int water=0;
+
+    int set_temp=100;
+    int set_light=100;
+    int set_water=100;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -89,24 +96,71 @@ public class Myplant extends AppCompatActivity{
             }
         });
 
+
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                num = num+5;
-                progressBar1.incrementProgressBy(5);
-                progressBar2.incrementProgressBy(10);
-                per1.setText(String.valueOf(num));
-                if(num<=30)
-                    progressBar1.getProgressDrawable().setColorFilter(Color.RED, PorterDuff.Mode.SRC_IN);
-                else if(num>30&&num<=60)
-                    progressBar1.getProgressDrawable().setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
-                else
-                    progressBar1.getProgressDrawable().setColorFilter(Color.GREEN, PorterDuff.Mode.SRC_IN);
+                if(temp>=100)
+                    temp=0;
+                if(light>=100)
+                    light=0;
+                if(water>=100)
+                    water=0;
 
-                if(num==100) {
-                    progressBar1.incrementProgressBy(-100);
-                    num=0;
-                }
+                progressBar1.setProgress(100*temp/set_temp);
+                progressBar2.setProgress(100*light/set_light);
+                progressBar3.setProgress(100*water/set_water);
+
+                per1.setText(String.valueOf(temp));
+                per2.setText(String.valueOf(light));
+                per3.setText(String.valueOf(water));
+
+                if(temp<=50)
+                    progressBar1.getProgressDrawable().setColorFilter(Color.rgb(230,76,60), PorterDuff.Mode.SRC_IN);
+                else if(temp>50&&temp <=80)
+                    progressBar1.getProgressDrawable().setColorFilter(Color.rgb(240,195,15), PorterDuff.Mode.SRC_IN);
+                else
+                    progressBar1.getProgressDrawable().setColorFilter(Color.rgb(46,203,113), PorterDuff.Mode.SRC_IN);
+
+                if(light<=50)
+                    progressBar2.getProgressDrawable().setColorFilter(Color.rgb(230,76,60), PorterDuff.Mode.SRC_IN);
+                else if(light>50&&light<=80)
+                    progressBar2.getProgressDrawable().setColorFilter(Color.rgb(240,195,15), PorterDuff.Mode.SRC_IN);
+                else
+                    progressBar2.getProgressDrawable().setColorFilter(Color.rgb(46,203,113), PorterDuff.Mode.SRC_IN);
+
+                if(water<=50)
+                    progressBar3.getProgressDrawable().setColorFilter(Color.rgb(230,76,60), PorterDuff.Mode.SRC_IN);
+                else if(water>50&&water <=80)
+                    progressBar3.getProgressDrawable().setColorFilter(Color.rgb(240,195,15), PorterDuff.Mode.SRC_IN);
+                else
+                    progressBar3.getProgressDrawable().setColorFilter(Color.rgb(46,203,113), PorterDuff.Mode.SRC_IN);
+
+
+                if(water>=50&&temp>=50&&light>=50)
+                    speech.setText("최적한 환경이에요");
+                else if(water>=50&&temp>=50&&light<50)
+                speech.setText("햇빛이 부족해요");
+                else if(water>=50&&temp<50&&light>=50)
+                    speech.setText("너무 추워요");
+                else if(water>=50&&temp<50&&light<50)
+                    speech.setText("춥고 어두워요");
+                else if(water<50&&temp>=50&&light>=50)
+                    speech.setText("목이 말라요");
+                else if(water<50&&temp>=50&&light<50)
+                    speech.setText("어둡고 목이말라요");
+                else if(water<50&&temp<50&&light>=50)
+                    speech.setText("춥고 목이말라요");
+                else if(water<50&&temp<50&&light<50)
+                    speech.setText("살기가 힘들어요");
+
+                int SCORE = (100*temp/set_temp+100*light/set_light+100*water/set_water)/3;
+                score.setText(String.valueOf(SCORE));
+
+                temp+=5;
+                light+=15;
+                water+=30;
             }
         });
     }

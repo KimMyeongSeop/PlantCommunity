@@ -28,6 +28,7 @@ public class SignupMyPlant extends AppCompatActivity {
         Spinner s2 = (Spinner)findViewById(R.id.spinner2);
         Button Google=(Button)findViewById(R.id.button4);
         final ImageButton next=(ImageButton)findViewById(R.id.imageButton3);
+        final ImageButton back=(ImageButton)findViewById(R.id.imageButton7);
         final Button add_date=(Button)findViewById(R.id.button9);
         final Button sub_date=(Button)findViewById(R.id.button7);
         final TextView day=(TextView)findViewById(R.id.textView7);
@@ -129,10 +130,15 @@ public class SignupMyPlant extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),
-                        Signupinfo.class);
-                intent.putExtra("등록완료","등록완료");
-                startActivityForResult(intent,1004);
+                Intent intent=new Intent(getApplicationContext(),Myplant.class);
+                startActivity(intent);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

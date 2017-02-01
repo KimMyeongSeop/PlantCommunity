@@ -10,8 +10,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="0dp"
         android:layout_below="@+id/relativeLayout2"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/textView23" />
+        android:layout_alignParentStart="true" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -49,33 +48,4 @@
             android:tintMode="screen" />
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/textView23"
-        android:layout_marginEnd="97dp"
-        android:layout_above="@+id/button8"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/textView24"
-        android:layout_marginLeft="102dp"
-        android:layout_alignTop="@+id/textView23"
-        android:layout_toStartOf="@+id/textView23" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="날짜 가져오기"
-        android:id="@+id/button8"
-        android:onClick="getDate"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="50dp" />
 </RelativeLayout>
